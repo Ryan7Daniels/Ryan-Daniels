@@ -1,61 +1,3 @@
-#WD-Title {
-  padding-left: 2.5%;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
-  margin-right: 77%;
-  margin-bottom: 5%;
-  background-color: #d884c3;
-  color: d884c3;
-  font-family: monospace;
-  text-transform: uppercase;
-}
-
-#topstuff1 {
-  margin-top: -10%;
-  margin-left: 25%;
-  margin-right: 40%;
-  background-color: #d884c3;
-}
-
-#topstuff2 {
-  margin-top: -17%;
-  margin-left: 30%;
-  margin-right: 35%;
-  background-color: #d884c3;
-}
-
-#topstuff3 {
-  margin-top: -7%;
-  margin-right: 15%;
-  margin-left: 50%;
-  background-color: #d884c3;
-}
-
-#topstuff4 {
-  margin-top: -6%;
-  margin-right: 65%;
-  margin-left: 1%;
-  background-color: #d884c3;
-}
-
-.topstuff1-2 {
-  padding-top: 6.25%;
-  padding-bottom: 5%;
-  opacity: 0.7;
-}
-
-.topstuff3-4 {
-  padding-top: 6%;
-  padding-bottom: 5%;
-  opacity: 0.7;
-}
-.all-top-stuff{
-  position: relative;
-  z-index: 1;
-}
-html,body {
- background-color:#d884c3;
-}
 
 ul {
   display: flex;
@@ -270,11 +212,8 @@ canvas {
 	.tfclear{
 		clear:both;
 	}
-body {
-  background-image: url(http://cbien.co/wp-content/uploads/2016/09/unique-white-marble-background-5.jpg);
-}
 
-.weekplanner {
+.ryandaniels {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
@@ -298,4 +237,34 @@ table {
   margin-right: auto;
   margin-left: auto;
   margin-top: 20px;
+}
+
+body {
+  background: #fff42b;
+}
+
+.st0 {
+  fill: #ef83c0;
+}
+
+.drop {
+  display: block;
+  position: relative;
+}
+
+.drop.move {
+  animation: move 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+}
+
+@keyframes move {
+  from {
+    transform: translateY(0px);
+    opacity: 1.0;
+  }
+  to {
+    transform: translateY(100px);
+    opacity: 0;
+  }
 }

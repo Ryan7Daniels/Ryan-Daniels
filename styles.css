@@ -273,3 +273,7 @@ height:500px;
 width:500px;
 text-align: center;
 }
+.container{
+display:inline-block;
+text-align:center;
+}

@@ -61,5 +61,97 @@ GPIO.cleanup() #At the end of a program, it is good practice to clean up any res
 		<img class="challengepics" src="Challenge1.JPG"/>
 			<div class=codecontainer>
 			</div>
+			
+			<h1> Challenge 3 </h1>
+		<div class=container> 
+		<img class="challengepics" src="http://gph.to/2mg6GOC"/>
+			<div class=codecontainer>
+<span>import RPi.GPIO as GPIO ## Import GPIO library
+import time ## Import 'time' library. Allows us to use 'sleep'
+
+GPIO.setmode(GPIO.BCM) ## Use board pin numbering <br>
+GPIO.setup(18, GPIO.OUT) ## Setup GPIO Pin 7 to OUT
+
+##Define a function named Blink()
+
+x = 0; <br>
+
+def turnon():
+	turnon = GPIO.output(18,GPIO.HIGH);
+
+def turnoff():
+	turnoff = GPIO.output(18,GPIO.LOW); <br>
+
+def KeyboardHero():
+	BlinkDuration = raw_input("Press Any Key");
+	print(BlinkDuration); <br>
+	if BlinkDuration == "1":
+		turnon()
+		time.sleep(0.1)
+		turnoff()<br>
+		print("Blinked for one second")
+		print("X = {} x".format(x))
+	if BlinkDuration == "`":<br>
+		turnon()
+		time.sleep(1)
+		turnoff()<br>
+		print("Blinked for one second")
+		print("X = {} x".format(x))	 
+	elif BlinkDuration == "2":<br>
+		turnon()
+		time.sleep(0.2)
+		turnoff()<br>
+		print("Blinked for two second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "3": <br>
+		turnon()
+		time.sleep(0.3)
+		turnoff() <br>
+		print("Blinked for three second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "4":
+		turnon()<br>
+		time.sleep(0.4)
+		turnoff()
+		print("Blinked for four second")
+		print("X = {} x".format(x))<br>
+	elif BlinkDuration == "5":
+		turnon()
+		time.sleep(0.5)
+		turnoff() <br>
+		print("Blinked for five second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "6":
+		turnon()<br>
+		time.sleep(0.6)
+		turnoff()
+		print("Blinked for five second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "7":<br>
+		turnon()
+		time.sleep(0.7)
+		turnoff()<br>
+		print("Blinked for five second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "8":
+		turnon()<br>
+		time.sleep(0.8)
+		turnoff()
+		print("Blinked for five second")
+		print("X = {} x".format(x))
+	elif BlinkDuration == "9":<br>
+		turnon()
+		time.sleep(0.9)
+		turnoff()
+		print("Blinked for five second")<br>
+		print("X = {} x".format(x))
+	else:
+		print("Seriously you were given all those keys and didnt press one?");<br>
+
+while x < 100:
+ 	KeyboardHero();
+	      x=x+1 </span>
+	</div>
+			</div>
 	</body>
 </html>

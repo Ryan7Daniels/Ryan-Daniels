@@ -14,40 +14,40 @@
 		<h1> Challenge 1 </h1>
 		<div class=container> 
 		<img class="challengepics" src="Challenge1.JPG"/>
-			<div class=codecontainer>import RPi.GPIO as GPIO #We add the GPIO library to our script so we can use the pins on our RPi.
-import time #Remember from our GoPiGo times, we need to use time.sleep() to control the flow of our code (so it isn't all executed at once!)
+			<div class=codecontainer>
+				import RPi.GPIO as GPIO #We add the GPIO library to our script so we can use the pins on our RPi.
+import time #Remember from our GoPiGo times, we need to use time.sleep() to control the flow of our code (so it isn't all executed at once!) <br>
 
 GPIO.setmode(GPIO.BCM) #This means that you are referring to the pins by the numbers after "GPIO".
-#The first answer here goes into more detail --> http://raspberrypi.stackexchange.com/questions/12966/what-is-the-difference-between-board-and-bcm-for-gpio-pin-numbering
+#The first answer here goes into more detail --> http://raspberrypi.stackexchange.com/questions/12966/what-is-the-difference-between-board-and-bcm-for-gpio-pin-numbering <br>
 
 GPIO.setwarnings(False) #If RPi.GPIO detects that a pin has been configured to something other than the default (input), you get a warning when you try to configure a script; we don't want to be warned, we know what we are doing (hopefully)!
 
-GPIO.setup(18,GPIO.OUT) #You need to set up every pin you are using as an input or an output; here we let the RPi know we will be using GPIO pin 18 as an output.
-
+GPIO.setup(18,GPIO.OUT) #You need to set up every pin you are using as an input or an output; here we let the RPi know we will be using GPIO pin 18 as an output. <br>
 
 print "LED on" #This prints a message to the Terminal to tell us what code is being executed
-GPIO.output(18,GPIO.HIGH) #In the parenthesis we are selecting pin number 18 and turning it "on" ("high"); to turn a pin "off" we would write "low".
+GPIO.output(18,GPIO.HIGH) #In the parenthesis we are selecting pin number 18 and turning it "on" ("high"); to turn a pin "off" we would write "low". <br>
 time.sleep(0.5) #Wait one second!
 
 print "LED off"
 GPIO.output(18,GPIO.LOW)
 time.sleep(1) #Wait one second!
+print "LED on" #This prints a message to the Terminal to tell us what code is being executed <br>
+GPIO.output(18,GPIO.HIGH) #In the parenthesis we are selecting pin number 18 and turning it "on" ("high"); to turn a pin "off" we would write "low".
+time.sleep(0.5) #Wait one second! <br>
+
+print "LED off" 
+GPIO.output(18,GPIO.LOW)
+time.sleep(0.5) #Wait one second!<br>
+
+print "LED off"
+GPIO.output(18,GPIO.LOW)
+time.sleep(1) #Wait one second! <br>
 print "LED on" #This prints a message to the Terminal to tell us what code is being executed
 GPIO.output(18,GPIO.HIGH) #In the parenthesis we are selecting pin number 18 and turning it "on" ("high"); to turn a pin "off" we would write "low".
 time.sleep(0.5) #Wait one second!
 
-print "LED off"
-GPIO.output(18,GPIO.LOW)
-time.sleep(0.5) #Wait one second!
-
-print "LED off"
-GPIO.output(18,GPIO.LOW)
-time.sleep(1) #Wait one second!
-print "LED on" #This prints a message to the Terminal to tell us what code is being executed
-GPIO.output(18,GPIO.HIGH) #In the parenthesis we are selecting pin number 18 and turning it "on" ("high"); to turn a pin "off" we would write "low".
-time.sleep(0.5) #Wait one second!
-
-print "LED off"
+print "LED off"<br>
 GPIO.output(18,GPIO.LOW)
 
 

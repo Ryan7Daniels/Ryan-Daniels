@@ -66,91 +66,54 @@ GPIO.cleanup() #At the end of a program, it is good practice to clean up any res
 		<div class=container> 
 		<img class="challengepics" src="http://gph.to/2mg6GOC"/>
 			<div class=codecontainer>
-<span>import RPi.GPIO as GPIO ## Import GPIO library
-import time ## Import 'time' library. Allows us to use 'sleep'
+<span>import RPi.GPIO as GPIO #We add the GPIO library to our script so we can use the pins on our RPi.
+import time #Remember from our GoPiGo times, we need to use time.sleep() to control the flow of our code (so it isn't all executed at once!)
 
-GPIO.setmode(GPIO.BCM) ## Use board pin numbering <br>
-GPIO.setup(18, GPIO.OUT) ## Setup GPIO Pin 7 to OUT
+def ramiup():
+	GPIO.output(18,GPIO.HIGH)
+	time.sleep(.2)
+	GPIO.output(18,GPIO.LOW)
+	time.sleep(.2)
+	GPIO.output(18,GPIO.HIGH)
+	time.sleep(.6)
+	GPIO.output(18,GPIO.LOW)
+	time.sleep(.2)
+	GPIO.output(18,GPIO.HIGH)
+	time.sleep(.2)
+	GPIO.output(18,GPIO.LOW)
 
-##Define a function named Blink()
+def gloup():
+	GPIO.output(18,GPIO.HIGH)
+	time.sleep(.6)
+	GPIO.output(18,GPIO.LOW)
+	
+GPIO.setmode(GPIO.BCM) #This means that you are referring to the pins by the numbers after "GPIO".
+#The first answer here goes into more detail --> http://raspberrypi.stackexchange.com/questions/12966/what-is-the-difference-between-board-and-bcm-for-gpio-pin-numbering
 
-x = 0; <br>
+GPIO.setwarnings(False) #If RPi.GPIO detects that a pin has been configured to something other than the default (input), you get a warning when you try to configure a script; we don't want to be warned, we know what we are doing (hopefully)!
 
-def turnon():
-	turnon = GPIO.output(18,GPIO.HIGH);
+GPIO.setup(18,GPIO.OUT) #You need to set up every pin you are using as an input or an output; here we let the RPi know we will be using GPIO pin 18 as an output.
 
-def turnoff():
-	turnoff = GPIO.output(18,GPIO.LOW); <br>
+while True:
 
-def KeyboardHero():
-	BlinkDuration = raw_input("Press Any Key");
-	print(BlinkDuration); <br>
-	if BlinkDuration == "1":
-		turnon()
-		time.sleep(0.1)
-		turnoff()<br>
-		print("Blinked for one second")
-		print("X = {} x".format(x))
-	if BlinkDuration == "`":<br>
-		turnon()
-		time.sleep(1)
-		turnoff()<br>
-		print("Blinked for one second")
-		print("X = {} x".format(x))	 
-	elif BlinkDuration == "2":<br>
-		turnon()
-		time.sleep(0.2)
-		turnoff()<br>
-		print("Blinked for two second")
-		print("X = {} x".format(x))
-	elif BlinkDuration == "3": <br>
-		turnon()
-		time.sleep(0.3)
-		turnoff() <br>
-		print("Blinked for three second")
-		print("X = {} x".format(x))
-	elif BlinkDuration == "4":
-		turnon()<br>
-		time.sleep(0.4)
-		turnoff()
-		print("Blinked for four second")
-		print("X = {} x".format(x))<br>
-	elif BlinkDuration == "5":
-		turnon()
-		time.sleep(0.5)
-		turnoff() <br>
-		print("Blinked for five second")
-		print("X = {} x".format(x))
-	elif BlinkDuration == "6":
-		turnon()<br>
-		time.sleep(0.6)
-		turnoff()
-		print("Blinked for five second")
-		print("X = {} x".format(x))
-	elif BlinkDuration == "7":<br>
-		turnon()
-		time.sleep(0.7)
-		turnoff()<br>
-		print("Blinked for five second")
-		print("X = {} x".format(x))
-	elif BlinkDuration == "8":
-		turnon()<br>
-		time.sleep(0.8)
-		turnoff()
-		print("Blinked for five second")
-		print("X = {} x".format(x))
-	elif BlinkDuration == "9":<br>
-		turnon()
-		time.sleep(0.9)
-		turnoff()
-		print("Blinked for five second")<br>
-		print("X = {} x".format(x))
-	else:
-		print("Seriously you were given all those keys and didnt press one?");<br>
-
-while x < 100:
- 	KeyboardHero();
-	      x=x+1 </span>
+	print 'Go ahead and do your thang bruh.'
+	
+	str = raw_input()
+	str = str.lower()
+	
+	for i in range(0, len(str),1):
+		if str[i] == "ramiup":
+			A()
+			time.sleep(.6)
+			
+		elif str[i] == "gloup":
+			B()
+			time.sleep(.6)
+			
+		else:
+			print 'wat do'
+			break
+</span>
 	</div>
 			</div>
 	</body>
